@@ -1379,6 +1379,42 @@ entries:
     urls:
     - assets/portshift-operator/portshift-operator-0.1.000.tgz
     version: 0.1.000
+  portworx:
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/release-name: portworx
+    apiVersion: v1
+    appVersion: "2.8"
+    created: "2021-09-30T17:23:05.868931511-06:00"
+    description: A Helm chart for installing Portworx on Kubernetes.
+    digest: 3b2d8361ee207c11a458d75876dcd96b8eb1ad96e3df6a2414e665b09894e859
+    home: https://portworx.com/
+    icon: https://raw.githubusercontent.com/portworx/helm/master/doc/media/k8s-porx.png
+    keywords:
+    - Storage
+    - ICP
+    - persistent disk
+    - pvc
+    - cloud native storage
+    - persistent storage
+    - portworx
+    - amd64
+    kubeVersion: '>=1.10.0'
+    maintainers:
+    - email: hadesai@purestorage.com
+      name: harsh-px
+    - email: onaumov@purestorage.com
+      name: trierra
+    - email: tasharma@purestorage.com
+      name: sharma-tapas
+    - email: dahuang@purestorage.com
+      name: dahuang-purestorage
+    name: portworx
+    sources:
+    - https://github.com/portworx/helm
+    urls:
+    - assets/portworx/portworx-2.8.1.tgz
+    version: 2.8.1
   sysdig:
   - annotations:
       catalog.cattle.io/certified: partner
