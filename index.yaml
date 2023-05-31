@@ -28640,6 +28640,42 @@ entries:
       catalog.cattle.io/kube-version: '>=1.16.0-0'
       catalog.cattle.io/release-name: portworx
     apiVersion: v1
+    appVersion: 2.13.0
+    created: "2022-11-02T15:38:11.94506-04:00"
+    description: A Helm chart for installing Portworx on Kubernetes.
+    digest: 7ca56fde1664c1bfdb062a1d1482d93c795efabe21d36702023f39059e50eaf5
+    home: https://portworx.com/
+    icon: https://raw.githubusercontent.com/portworx/helm/master/doc/media/k8s-porx.png
+    keywords:
+      - Storage
+      - ICP
+      - persistent disk
+      - pvc
+      - cloud native storage
+      - persistent storage
+      - portworx
+      - amd64
+    maintainers:
+      - email: hadesai@purestorage.com
+        name: harsh-px
+      - email: onaumov@purestorage.com
+        name: trierra
+      - email: tasharma@purestorage.com
+        name: sharma-tapas
+      - email: dahuang@purestorage.com
+        name: dahuang-purestorage
+    name: portworx
+    sources:
+      - https://github.com/portworx/charts-rancher/tree/master/stable
+    urls:
+      - assets/portworx/portworx-2.13.0.tgz
+    version: 2.13.0
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Portworx
+      catalog.cattle.io/kube-version: '>=1.16.0-0'
+      catalog.cattle.io/release-name: portworx
+    apiVersion: v1
     appVersion: 2.11.4
     created: "2022-11-02T15:38:11.94506-04:00"
     description: A Helm chart for installing Portworx on Kubernetes.
@@ -28851,6 +28887,44 @@ entries:
     - assets/portworx/portworx-2.8.0.tgz
     version: 2.8.0
   portworx-essentials:
+  - annotations:
+      catalog.cattle.io/certified: partner
+      catalog.cattle.io/display-name: Portworx Essentials
+      catalog.cattle.io/kube-version: '>=1.16.0-0'
+      catalog.cattle.io/release-name: portworx-essentials
+    apiVersion: v1
+    appVersion: 2.13.0
+    created: "2022-11-02T15:38:11.950909-04:00"
+    description: A Helm chart for installing Portworx Essentials on Kubernetes.
+    digest: 69c3db6382d1dd68ce919ebce2c0117cab478c211514a9ebc9b26a6f6dc36a0c
+    home: https://portworx.com/
+    icon: https://raw.githubusercontent.com/portworx/helm/master/doc/media/k8s-porx.png
+    keywords:
+      - Storage
+      - ICP
+      - persistent disk
+      - pvc
+      - cloud native storage
+      - persistent storage
+      - portworx
+      - amd64
+      - portworx essentials
+      - free
+    maintainers:
+      - email: hadesai@purestorage.com
+        name: harsh-px
+      - email: onaumov@purestorage.com
+        name: trierra
+      - email: tasharma@purestorage.com
+        name: sharma-tapas
+      - email: dahuang@purestorage.com
+        name: dahuang-purestorage
+    name: portworx-essentials
+    sources:
+      - https://github.com/portworx/charts-rancher/tree/master/stable
+    urls:
+      - assets/portworx/portworx-essentials-2.13.0.tgz
+    version: 2.13.0
   - annotations:
       catalog.cattle.io/certified: partner
       catalog.cattle.io/display-name: Portworx Essentials

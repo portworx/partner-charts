@@ -4,7 +4,7 @@ annotations:
   catalog.cattle.io/kube-version: '>=1.16.0-0'
   catalog.cattle.io/release-name: portworx
 apiVersion: v1
-appVersion: 2.11.4
+appVersion: 2.13.0
 description: A Helm chart for installing Portworx on Kubernetes.
 home: https://portworx.com/
 icon: https://raw.githubusercontent.com/portworx/helm/master/doc/media/k8s-porx.png
@@ -29,4 +29,4 @@ maintainers:
 name: portworx
 sources:
 - https://github.com/portworx/charts-rancher/tree/master/stable
-version: 2.11.4
+version: 2.13.0
