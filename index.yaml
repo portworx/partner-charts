@@ -28669,7 +28669,7 @@ entries:
       - https://github.com/portworx/charts-rancher/tree/master/stable
     urls:
       - assets/portworx/portworx-2.13.0.tgz
-    version: 2.13.0
+    version: 2.13.3
   - annotations:
       catalog.cattle.io/certified: partner
       catalog.cattle.io/display-name: Portworx
@@ -28924,7 +28924,7 @@ entries:
       - https://github.com/portworx/charts-rancher/tree/master/stable
     urls:
       - assets/portworx/portworx-essentials-2.13.0.tgz
-    version: 2.13.0
+    version: 2.13.3
   - annotations:
       catalog.cattle.io/certified: partner
       catalog.cattle.io/display-name: Portworx Essentials
