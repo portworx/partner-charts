@@ -68,7 +68,7 @@ release: {{ .Release.Name | quote }}
     {{- if (eq "/" (.Values.customRegistryURL | regexFind "/")) -}}
         {{ trim .Values.customRegistryURL }}
     {{- else -}}
-        {{- if or (or (and (semverCompare ">= 1.16.14-0" $version ) (semverCompare "<=1.17.0-0"  $version)) (and (semverCompare ">= 1.17.10-0" $version) (semverCompare "<=1.18.0-0" $version ))) (semverCompare ">=1.18.7-0" $version) -}}
+        {{- if or (or (and (semverCompare ">= 1.16.14-0" $version ) (semverCompare "<=1.17.0-0"  $version)) (and (semverCompare ">= 1.17.10" $version) (semverCompare "<=1.18.0-0" $version ))) (semverCompare ">=1.18.7-0" $version) -}}
            {{cat (trim .Values.customRegistryURL) "/k8s.gcr.io" | replace " " ""}}
         {{- else -}}
            {{cat (trim .Values.customRegistryURL) "/gcr.io/google_containers" | replace " " ""}}

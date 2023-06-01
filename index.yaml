@@ -28640,7 +28640,7 @@ entries:
       catalog.cattle.io/kube-version: '>=1.16.0-0'
       catalog.cattle.io/release-name: portworx
     apiVersion: v1
-    appVersion: 2.13.0
+    appVersion: 2.13.3
     created: "2022-11-02T15:38:11.94506-04:00"
     description: A Helm chart for installing Portworx on Kubernetes.
     digest: 7ca56fde1664c1bfdb062a1d1482d93c795efabe21d36702023f39059e50eaf5
@@ -28893,7 +28893,7 @@ entries:
       catalog.cattle.io/kube-version: '>=1.16.0-0'
       catalog.cattle.io/release-name: portworx-essentials
     apiVersion: v1
-    appVersion: 2.13.0
+    appVersion: 2.13.3
     created: "2022-11-02T15:38:11.950909-04:00"
     description: A Helm chart for installing Portworx Essentials on Kubernetes.
     digest: 69c3db6382d1dd68ce919ebce2c0117cab478c211514a9ebc9b26a6f6dc36a0c
