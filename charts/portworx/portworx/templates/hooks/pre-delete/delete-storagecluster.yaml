@@ -1,11 +1,13 @@
+{{- if .Values.deployCluster }}
 {{- $customRegistryURL := .Values.customRegistryURL | default "none" }}
 {{- $registrySecret := .Values.registrySecret | default "none" }}
+{{- $clusterName := .Values.clusterName }}
 
 apiVersion: batch/v1
 kind: Job
 metadata:
-  namespace: kube-system
-  name: px-hook-predelete-nodelabel
+  namespace: {{ template "px.getDeploymentNamespace" . }}
+  name: px-hook-delete-storagecluster
   labels:
     heritage: {{.Release.Service | quote }}
     release: {{.Release.Name | quote }}
@@ -14,14 +16,10 @@ metadata:
     app.kubernetes.io/instance: {{.Release.Name | quote }}
   annotations:
     "helm.sh/hook": pre-delete
-    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-weight": "10"
     "helm.sh/hook-delete-policy": before-hook-creation
 spec:
-{{ if semverCompare ">= 1.8-0" .Capabilities.KubeVersion.GitVersion }}
   backoffLimit: 0
-{{ else }}
-  activeDeadlineSeconds: 30
-{{ end }}
   template:
     spec:
       {{- if not (eq $registrySecret "none") }}
@@ -31,10 +29,13 @@ spec:
       serviceAccountName: {{ template "px.hookServiceAccount" . }}
       restartPolicy: Never
       containers:
-      - name: pre-delete-job
-        {{- if eq $customRegistryURL "none" }}
-        image: "lachlanevenson/k8s-kubectl:{{ template "px.kubernetesVersion" . }}"
-        {{- else}}
-        image: "{{ $customRegistryURL }}/lachlanevenson/k8s-kubectl:{{ template "px.kubernetesVersion" . }}"
-        {{- end}}
-        args: ['label','nodes','--all','px/enabled=remove','--overwrite']
+        - name: delete-storagecluster
+          {{- if eq $customRegistryURL "none" }}
+          image: "bitnami/kubectl:{{ template "px.kubectlImageTag" . }}"
+          {{- else}}
+          image: "{{ $customRegistryURL }}/bitnami/kubectl:{{ template "px.kubectlImageTag" . }}"
+          {{- end}}
+          command: ['/bin/sh',
+                    '-c',
+                    'kubectl -n {{ template "px.getDeploymentNamespace" . }} delete storagecluster {{ $clusterName }} --ignore-not-found']
+{{- end }}

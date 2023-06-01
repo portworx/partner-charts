@@ -4,7 +4,7 @@ annotations:
   catalog.cattle.io/kube-version: '>=1.16.0-0'
   catalog.cattle.io/release-name: portworx-essentials
 apiVersion: v1
-appVersion: 2.11.4
+appVersion: 2.13.3
 description: A Helm chart for installing Portworx Essentials on Kubernetes.
 home: https://portworx.com/
 icon: https://raw.githubusercontent.com/portworx/helm/master/doc/media/k8s-porx.png
@@ -31,4 +31,4 @@ maintainers:
 name: portworx-essentials
 sources:
 - https://github.com/portworx/charts-rancher/tree/master/stable
-version: 2.11.4
+version: 2.13.3
